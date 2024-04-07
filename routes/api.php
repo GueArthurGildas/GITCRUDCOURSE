@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\loginColtroller;
 use App\Http\Controllers\API\registerController;
 use App\Http\Controllers\API\TaskController;
 use Illuminate\Http\Request;
@@ -26,3 +27,4 @@ Route::prefix("v1")->as("v1")->middleware('auth:sanctum')->group(function () {
 });
 
 Route::Post('register',registerController::class);
+Route::get('login',loginColtroller::class);
